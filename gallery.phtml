@@ -67,18 +67,28 @@ if (!$aspect_ratio)
                 },
                "fullscreen": {
                    
+                  <?php if (($block->getVar("gallery/fullscreen/nav"))): ?>
                     "nav": "<?php /* @escapeNotVerified */  echo $block->getVar("gallery/fullscreen/nav"); ?>",
+                     <?php endif; ?>
+                      <?php if (($block->getVar("gallery/fullscreen/loop"))): ?>
                     "loop": <?php /* @escapeNotVerified */  echo $block->getVar("gallery/fullscreen/loop"); ?>,
+                      <?php endif; ?>
+                    <?php if (($block->getVar("gallery/fullscreen/navdir"))): ?>
                    "navdir": "<?php /* @escapeNotVerified */  echo $block->getVar("gallery/fullscreen/navdir"); ?>",
+                    <?php endif; ?>
                      <?php if (($block->getVar("gallery/fullscreen/arrows"))): ?>
                    "arrows": <?php /* @escapeNotVerified */  echo $block->getVar("gallery/fullscreen/arrows"); ?>,
                    <?php endif; ?>
                     <?php if (($block->getVar("gallery/fullscreen/caption"))): ?>
                     "showCaption": <?php /* @escapeNotVerified */  echo $block->getVar("gallery/fullscreen/caption"); ?>,
                     <?php endif; ?>
+                     <?php if (($block->getVar("gallery/fullscreen/transition/duration"))): ?>
                     "transitionduration": <?php /* @escapeNotVerified */  echo $block->getVar("gallery/fullscreen/transition/duration"); ?>,
+                     <?php endif; ?>
+                     <?php if (($block->getVar("gallery/fullscreen/transition/effect"))): ?>
                     "transition": "<?php /* @escapeNotVerified */  echo $block->getVar("gallery/fullscreen/transition/effect"); ?>"
-                },
+                     <?php endif; ?>
+                     },
                 "breakpoints": <?php /* @escapeNotVerified */ echo $block->getBreakpoints(); ?>
             }
         }
